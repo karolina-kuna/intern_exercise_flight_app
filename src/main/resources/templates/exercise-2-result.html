@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css} "/>
+</head>
+<body>
+<p class="h2 mx-2" th:if="${IATACode != 'No data'}">Exercise 2 results</p>
+<table class="table table-striped mx-2"  th:if="${IATACode} != 'No data'">
+    <tbody>
+
+    <tr>
+    <td>Airport code:</td>
+    <td><span class="text-primary" th:text="${IATACode}"></span></td>
+    </tr>
+    <tr>
+        <td>Date:</td>
+        <td><span class="text-primary" th:text="${date}"></span></td>
+    </tr>
+    <tr>
+        <td>Number of flights departing from this airport:</td>
+        <td><span class="text-primary" th:text="${numberOfPlainsDeparting}"></span></td>
+    </tr>
+    <tr>
+        <td>Number of flights arriving to this airport:</td>
+        <td><span class="text-primary" th:text="${numberOfPlainsArriving}"></span></td>
+    </tr>
+    <tr>
+        <td>Total number of baggage arriving to this airport:</td>
+        <td><span class="text-success" th:text="${amountOfBaggageArriving}"></span> </td>
+    </tr>
+    <tr>
+        <td>Total number of baggage departing from this airport:</td>
+        <td><span class="text-success" th:text="${amountOfBaggageDeparting} "></span> </td>
+
+    </tr>
+
+    </tbody>
+</table>
+<a href="/showSecondExercise" class="btn btn-primary mx-2 my-3 pt-2 col-sm-2">Previous page</a>
+
+</body>
+</html>

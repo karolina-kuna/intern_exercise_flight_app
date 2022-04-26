@@ -1,0 +1,38 @@
+[
+  {
+    "flightId": 0,
+    "flightNumber": 3134,
+    "departureAirportIATACode": "YYZ",
+    "arrivalAirportIATACode": "MIT",
+    "departureDate": "2020-10-09T03:55:47 -02:00"
+  },
+  {
+    "flightId": 1,
+    "flightNumber": 3626,
+    "departureAirportIATACode": "YYT",
+    "arrivalAirportIATACode": "KRK",
+    "departureDate": "2019-04-02T12:47:51 -02:00"
+  },
+  {
+    "flightId": 2,
+    "flightNumber": 9394,
+    "departureAirportIATACode": "YYZ",
+    "arrivalAirportIATACode": "PPX",
+    "departureDate": "2018-05-02T05:59:06 -02:00"
+  },
+  {
+    "flightId": 3,
+    "flightNumber": 7516,
+    "departureAirportIATACode": "YYT",
+    "arrivalAirportIATACode": "MIT",
+    "departureDate": "2020-03-06T09:49:57 -01:00"
+  },
+  {
+    "flightId": 4,
+    "flightNumber": 3099,
+    "departureAirportIATACode": "YYZ",
+    "arrivalAirportIATACode": "KRK",
+    "departureDate": "2018-09-10T09:55:03 -02:00"
+  }
+
+]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css} "/>
+
+</head>
+<body>
+<p class="h2 mx-2 mt-2">Exercise 2</p>
+<form th:action="@{/processForm2}" method="POST" th:object="${exercise2FormData}">
+    <div class="form-group pt-2 col-sm-5">
+        <label for="airportCode" class="mx-2">IATA Airport code</label>
+        <input onclick="myFunction()" type="text" class="form-control mx-2 pt-2" id="airportCode" th:field="*{IATACode}">
+        <p class="alert alert-warning pt-2 mx-2 mt-2 col-sm-5" th:if="${#fields.hasErrors('IATACode')}" th:errors="*{IATACode}"></p>
+        <label for="airPortCodeFlightDate" class="mx-2">Flight date</label>
+        <input onclick="myFunction()" type="date" class="form-control mx-2 pt-2" id="airPortCodeFlightDate" th:field="*{date}">
+        <p class="alert alert-warning pt-2 mx-2 mt-2 col-sm-3" th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></p>
+    </div>
+    <div id="alert_div" class="alert alert-danger fs-6 col-sm-5 mx-2 mt-2" th:if="${IATACode} == 'No data'">No data found for given code and date</div>
+
+    <button type="submit" class="btn btn-primary col-sm-1 mx-2 mt-4 mb-2  pt-2">Get data</button>
+</form>
+<a  class="btn btn-primary mx-2  pt-2 col-sm-1" href="/showFirstPage">Exercise 1</a>
+<script>
+    function myFunction() {
+        document.getElementById("alert_div").style.display="none";
+    }
+</script>
+</body>
+</html>
